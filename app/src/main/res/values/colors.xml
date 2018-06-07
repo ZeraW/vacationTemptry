@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1D4793</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="MainActivityMenu">#1D4793</color>
+    <color name="Service01">#E5E4E4</color>
+    <color name="Service02">#431D4793</color>
+    <color name="DetailsColor">#901D4793</color>
+    <color name="transplant1">#00ffffff</color>
+    <color name="btntransplant">#05ffffff</color>
+
+
+</resources>

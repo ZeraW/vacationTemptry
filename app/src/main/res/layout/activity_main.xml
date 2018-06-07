@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="gmsproduction.com.gmstemplate3.Activity.MainActivity"
+    android:orientation="vertical"
+    android:id="@+id/Linear_for_animation"
+
+    >
+
+<RelativeLayout
+        android:id="@+id/Main_splash_Relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:orientation="vertical"
+
+        >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/MainViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        </android.support.v4.view.ViewPager>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            >
+
+            <Button
+                android:id="@+id/Main_BTN_up_English"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="SKIP"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                />
+
+            <com.merhold.extensiblepageindicator.ExtensiblePageIndicator
+                android:id="@+id/flexibleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:indicatorRadius="4dp"
+                app:indicatorPadding="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+
+            <Button
+                android:id="@+id/Main_BTN_next_Arabic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text=">"
+                android:textSize="20sp"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+<LinearLayout
+    android:id="@+id/MainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:visibility="gone"
+    >
+
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/MainSilder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5.5"
+
+        >
+        <com.daimajia.slider.library.Indicators.PagerIndicator
+            android:id="@+id/custom_indicator_duck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|bottom"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:padding="5dp"
+            custom:selected_color="#0095BF"
+            custom:unselected_color="#55333333"
+            custom:shape="rect"
+            custom:selected_padding_left="2dp"
+            custom:selected_padding_right="2dp"
+            custom:unselected_padding_left="2dp"
+            custom:unselected_padding_right="2dp"
+            custom:selected_width="6dp"
+            custom:selected_height="6dp"
+            custom:unselected_width="6dp"
+            custom:unselected_height="6dp"
+            />
+
+    </com.daimajia.slider.library.SliderLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4.5"
+        android:background="@android:color/black"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3.5dp"
+            android:layout_marginBottom="3.5dp"
+            android:layout_weight="2.5"
+            android:background="@color/MainActivityMenu"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/btnAboutUs"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="49.5"
+                android:text="About Us"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/btnSubsidiaries"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="49.5"
+                android:text="Subsidiaries"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/btnProduct"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="49.5"
+                android:text="Products"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:layout_marginBottom="3.5dp"
+            android:background="@color/MainActivityMenu"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+
+            <TextView
+                android:id="@+id/btnServices"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="49.5"
+                android:text="Services"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/btnGallery"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="49.5"
+                android:text="Gallery"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:layout_marginBottom="3.5dp"
+            android:background="@color/MainActivityMenu"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="49.5"
+                android:text="Projects"
+                android:id="@+id/btnProjects"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/btnContacUs"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="49.5"
+                android:text="Contact Us"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                />
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3.5dp"
+            android:layout_weight="2.5"
+            android:background="@color/MainActivityMenu"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/btnClients"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="49.5"
+                android:text="Clients"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/btnArabic_English"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="49.5"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:text="عربي"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+</LinearLayout>

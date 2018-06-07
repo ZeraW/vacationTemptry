@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GmsTemplate3</string>
+    <string name="title_activity_basics">Basics</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
