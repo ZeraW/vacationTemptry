@@ -1,5 +1,20 @@
 <resources>
-    <string name="app_name">GmsTemplate3</string>
+    <string name="app_name">Vacation Cruise</string>
     <string name="title_activity_basics">Basics</string>
     <string name="title_activity_maps">Map</string>
+    <string name="Pager_Desc">Group of companies have their own <br />
+            Investment field in information <br />
+            technology , production.</string>
+
+    <string name="Pager_Desc2">Mobile application , Website , Digital \n
+    content , Plus trade electronic , Networking <br />
+    Software , Marketing <br />
+    And internet services .
+    </string>
+
+    <string name="Pager_title">GMS GROUP</string>
+
+    <string name="BASE_URL">app.digitalsigma.io/api</string>
+
+
 </resources>

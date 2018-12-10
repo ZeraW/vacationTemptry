@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="gmsproduction.com.gmstemplate3">
+    package="com.digitalsigma.vacationcruise">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,39 +14,29 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/gms"
+        android:icon="@drawable/appicon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/appicon"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-
-
-        >
+        android:theme="@style/AppTheme">
+        <activity android:name="com.digitalsigma.vacationcruise.Activity.BaseActivity" />
         <activity
-            android:name=".Activity.BaseActivity"
-             />
-        <activity
-            android:name=".Activity.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.digitalsigma.vacationcruise.Activity.MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait"
-            >
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.ProjectsActivity" />
         <activity
-            android:name=".Activity.Details.DetailsProjects"
+            android:name="com.digitalsigma.vacationcruise.Activity.Details.DetailsProjects"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".Activity.ServiceActivity" />
-        <activity android:name=".Activity.ProductActivity" />
-        <activity android:name=".Activity.Details.DetailsProduct" />
-        <activity android:name=".Activity.ClientsActivity" />
-        <activity android:name=".Activity.GalleryActivity" />
-        <activity android:name=".Activity.Details.DetailsGallery" />
+        <activity android:name="com.digitalsigma.vacationcruise.Activity.ServiceActivity" />
+        <activity android:name="com.digitalsigma.vacationcruise.Activity.ProductActivity" />
+        <activity android:name="com.digitalsigma.vacationcruise.Activity.Details.DetailsProduct" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -60,10 +50,9 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".Activity.ContactUsActivity"
+            android:name="com.digitalsigma.vacationcruise.Activity.ContactUsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".Activity.Subsidiaries" />
-        <activity android:name=".Activity.AboutUsActivity"></activity>
+        <activity android:name="com.digitalsigma.vacationcruise.Activity.AboutUsActivity" />
     </application>
 
 </manifest>

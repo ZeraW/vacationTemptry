@@ -41,7 +41,6 @@
                 android:layout_height="match_parent"
                 android:layout_weight="7.5"
                 android:layout_gravity="center"
-                android:text="agasgasgasgasga"
                 android:fontFamily="@font/segoeuib_bold"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"

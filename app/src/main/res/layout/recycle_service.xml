@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="gmsproduction.com.gmstemplate3.Activity.ProjectsActivity"
+    tools:context="com.digitalsigma.vacationcruise.Activity.ProjectsActivity"
     android:background="#F2F2F2"
     android:layout_margin="5dp"
     >
