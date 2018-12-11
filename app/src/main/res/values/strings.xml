@@ -17,4 +17,19 @@
     <string name="BASE_URL">app.digitalsigma.io/api</string>
 
 
+    <string name="profile">Cruise Info</string>
+    <string name="all_user">Book Now</string>
+    <string name="gallery">Gallery</string>
+
+    <!--booking form-->
+    <string name="name">Name</string>
+    <string name="phone">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="nationality">Nationality</string>
+    <string name="persons">Persons Number</string>
+    <string name="rooms">Rooms Number</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="note">Note..</string>
+
 </resources>

@@ -10,5 +10,6 @@
     <color name="transplant1">#00ffffff</color>
     <color name="btntransplant">#05ffffff</color>
 
-
+    <color name="textTabLight">#FFFFFF</color>
+    <color name="textTabBright">#000000</color>
 </resources>

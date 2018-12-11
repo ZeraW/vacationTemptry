@@ -35,7 +35,7 @@ public class ServiceActivity extends BaseActivity {
     private ArrayList<MainModel> modelArrayList;
     private ArrayList<String> modelArrayList2;
     private RequestQueue mRequestQueue;
-    private  String data_description, data_name, data_logo , images;
+    private String data_description, data_name, data_logo, images;
     int language = 1;
     ProgressDialog pDialog;
 
@@ -47,9 +47,9 @@ public class ServiceActivity extends BaseActivity {
 
         language = getIdLANG();
 
-        if(language==1){
+        if (language == 1) {
             setTitle("الخدمات");
-        }else{
+        } else {
             setTitle("Services");
         }
 
@@ -88,14 +88,14 @@ public class ServiceActivity extends BaseActivity {
                         data_logo = Utils.BASE_URL + objectdata.getString("logo");
 
                         JSONArray imgArray = objectdata.getJSONArray("images");
-                        for (int j=0 ; j< imgArray.length(); j++ ){
+                        for (int j = 0; j < imgArray.length(); j++) {
                             JSONObject imgObject = imgArray.getJSONObject(j);
                             images = Utils.BASE_URL + imgObject.getString("image");
                             modelArrayList2.add(images);
                         }
                         modelArrayList.add(new MainModel(data_name, data_description, data_logo));
                     }
-                    mAdapter = new ServiceAdapter(ServiceActivity.this, modelArrayList,modelArrayList2,x);
+                    mAdapter = new ServiceAdapter(ServiceActivity.this, modelArrayList, modelArrayList2, x);
                     mRecyclerView.setAdapter(mAdapter);
 
                 } catch (JSONException e) {

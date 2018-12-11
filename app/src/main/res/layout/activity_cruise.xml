@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.88">
+
+
+    <ImageView
+        android:id="@+id/Img"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/emshy" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_keyboard_arrow_left_black_24dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Img"
+        android:background="@color/textTabLight"
+        android:orientation="horizontal"
+        android:weightSum="9">
+
+        <TextView
+            android:id="@+id/mProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:background="@color/textTabLight"
+            android:padding="15dp"
+            android:text="@string/profile"
+            android:textColor="@color/textTabBright"
+            android:textSize="22sp" />
+
+
+
+        <TextView
+            android:id="@+id/mGallery"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+
+            android:background="@color/textTabBright"
+            android:padding="15dp"
+            android:text="@string/gallery"
+            android:textColor="@color/textTabLight"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/mUsers"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@color/textTabBright"
+            android:padding="15dp"
+            android:gravity="center"
+
+            android:text="@string/all_user"
+            android:textColor="@color/textTabLight"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

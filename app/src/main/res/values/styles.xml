@@ -39,4 +39,14 @@
         <item name="unselected_height">6dp</item>
     </style>
 
+
+
+    <style name="AppThemeNoAction" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/textTabBright</item>
+        <item name="colorAccent">@color/textTabBright</item>
+    </style>
+
+
 </resources>

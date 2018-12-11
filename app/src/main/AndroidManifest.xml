@@ -49,6 +49,11 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <activity android:name=".Activity.Cruises.CruisesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoAction"
+            />
+
         <activity
             android:name="com.digitalsigma.vacationcruise.Activity.ContactUsActivity"
             android:label="@string/title_activity_maps" />

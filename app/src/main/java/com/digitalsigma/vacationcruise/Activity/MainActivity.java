@@ -20,6 +20,7 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
+import com.digitalsigma.vacationcruise.Activity.Cruises.CruisesActivity;
 import com.merhold.extensiblepageindicator.ExtensiblePageIndicator;
 
 import java.util.ArrayList;
@@ -305,7 +306,8 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
         Services.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this,ServiceActivity.class);
+
+                Intent i = new Intent(MainActivity.this,CruisesActivity.class);
                 startActivity(i);
             }
         });

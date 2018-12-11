@@ -25,6 +25,7 @@ dependencies {
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.google.android.gms:play-services-maps:12.0.1'
     testImplementation 'junit:junit:4.12'
+
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile 'com.squareup.picasso:picasso:2.5.2'
@@ -34,6 +35,9 @@ dependencies {
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.daimajia.slider:library:1.1.5@aar'
     compile 'com.merhold.extensiblepageindicator:extensiblepageindicator:1.0.1'
+
+    //try this
+    implementation 'com.hbb20:ccp:2.2.3'
 
 
 }
