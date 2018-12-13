@@ -307,7 +307,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
             @Override
             public void onClick(View view) {
 
-                Intent i = new Intent(MainActivity.this,CruisesActivity.class);
+                Intent i = new Intent(MainActivity.this,ServiceActivity.class);
                 startActivity(i);
             }
         });

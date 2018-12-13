@@ -61,7 +61,7 @@ public class GalleryActivity extends BaseActivity {
         modelArrayList2 = new ArrayList<>();
 
         String url = "http://gms-sms.com:89/gmsred/api/galleries";
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, (String) null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url,null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {

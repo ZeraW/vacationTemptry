@@ -14,12 +14,28 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+import com.digitalsigma.vacationcruise.Activity.ServiceActivity;
+import com.digitalsigma.vacationcruise.Models.Utils;
 import com.digitalsigma.vacationcruise.R;
 import com.hbb20.CountryCodePicker;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -28,8 +44,9 @@ public class BookingFragment extends Fragment {
     View view;
     private TextView submitBtn;
     private EditText editName, editPhone, editEmail, editNaionality, editPersonsNum, editStartDate, editRooms, editEndDate, editSpecialReq;
-    private String stName, stPhone, stEmail, stNationality, stPersonsNum, stStartDate = "", stRooms, stEndDate = "", stSpecialReq = "";
+    private String id,stName, stPhone, stEmail, stNationality, stPersonsNum, stStartDate = "", stRooms, stEndDate = "", stSpecialReq = "";
     final Calendar myCalendar = Calendar.getInstance();
+    private RequestQueue mRequestQueue;
 
     CountryCodePicker ccp,ccpPhone;
 
@@ -51,6 +68,10 @@ public class BookingFragment extends Fragment {
                 bookingValidations();
             }
         });
+
+        if (getActivity()!=null){
+            id = ((CruisesActivity)getActivity()).getId();
+        }
 
 
         return view;
@@ -208,6 +229,69 @@ public class BookingFragment extends Fragment {
     }
 
     private void sendRequest(String name, String phone, String email, String nationality, String persons, String rooms, String startDate, String endDate, String note) {
+        String url = Utils.BOOKING + id +"/booking";
+        JSONObject details= new JSONObject();
+        try {
+            details.put("name",name);
+            details.put("phone",phone);
+            details.put("email",email);
+            details.put("nationality",nationality);
+            details.put("persons",persons);
+            details.put("rooms",rooms);
+            details.put("start_date",startDate);
+            details.put("end_date",endDate);
+            details.put("note",note);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        Log.e("sendRequest", "OBJECT: " + details );
+        Log.e("sendRequest", "url: " + url );
+
+
+        JsonObjectRequest PostRequest = new JsonObjectRequest(Request.Method.POST, url, details, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+
+                Log.e("sendRequest", "onResponse: " + response );
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+                Log.e("sendRequest", "onErrorResponse: "+error);
+                /*String body;
+                //get status code here
+                final String statusCode = String.valueOf(error.networkResponse.statusCode);
+                Log.e("sendRequest", "statusCode  " + statusCode);
+
+                //get response body and parse with appropriate encoding
+                try {
+                    body = new String(error.networkResponse.data,"UTF-8");
+                    Log.e("sendRequest", "body " + body);
+                } catch (UnsupportedEncodingException e) {
+                    // exception
+                }*/
+
+
+
+            }
+        }){
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("Accept", "application/json");
+                params.put("Content-Type", "application/json");
+                return params;
+            }
+        };
+
+        if (getActivity()!=null)
+        mRequestQueue = Volley.newRequestQueue(getActivity());
+        mRequestQueue.add(PostRequest);
+
 
     }
 }

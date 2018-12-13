@@ -33,11 +33,11 @@ public class GalleryFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_profle, container, false);
+        view = inflater.inflate(R.layout.fragment_galary, container, false);
 
         if (getActivity() != null) {
             //lang = ((CruisesActivity) getActivity()).getIdLANG();
-            mGalleryList = ((CruisesActivity) getActivity()).getmList();
+            mGalleryList = ((CruisesActivity) getActivity()).getmImgList();
         }
 
         mRecyclerView = view.findViewById(R.id.Recycler_Gallery_Frag);
@@ -45,7 +45,7 @@ public class GalleryFragment extends Fragment {
         mRecyclerView.setLayoutManager(LayoutManagaer);
 
 
-        mAdapter = new GalleryAdapter(getActivity(), mGalleryList, lang);
+        mAdapter = new GalleryAdapter(getContext(), mGalleryList, lang);
         mRecyclerView.setAdapter(mAdapter);
 
 

@@ -11,12 +11,13 @@
         android:id="@+id/Img"
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:scaleType="fitXY"
         android:src="@drawable/emshy" />
 
     <ImageView
+        android:id="@+id/cruise_back"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:tint="@android:color/white"
         android:src="@drawable/ic_keyboard_arrow_left_black_24dp" />
 
     <android.support.v4.view.ViewPager
@@ -46,7 +47,7 @@
             android:padding="15dp"
             android:text="@string/profile"
             android:textColor="@color/textTabBright"
-            android:textSize="22sp" />
+            android:textSize="17sp" />
 
 
 
@@ -61,7 +62,7 @@
             android:padding="15dp"
             android:text="@string/gallery"
             android:textColor="@color/textTabLight"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/mUsers"
@@ -74,7 +75,7 @@
 
             android:text="@string/all_user"
             android:textColor="@color/textTabLight"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
 
     </LinearLayout>

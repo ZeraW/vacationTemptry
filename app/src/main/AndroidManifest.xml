@@ -58,6 +58,8 @@
             android:name="com.digitalsigma.vacationcruise.Activity.ContactUsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name="com.digitalsigma.vacationcruise.Activity.AboutUsActivity" />
+        <activity android:name=".Activity.Details.DetailsGallery" />
+
     </application>
 
 </manifest>

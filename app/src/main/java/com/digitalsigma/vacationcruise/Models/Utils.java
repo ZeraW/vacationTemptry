@@ -5,9 +5,11 @@ package com.digitalsigma.vacationcruise.Models;
  */
 
 public class Utils {
-    public static final String BASE_URL = "http://app.digitalsigma.io";
+    public static final String BASE_URL = "https://deluxe-vacation.net";
 
-    public static final String BASE_URL_SERVICES = "http://app.digitalsigma.io/api/services";
+    public static final String BOOKING = "https://deluxe-vacation.net/api/";
+
+    public static final String BASE_URL_SERVICES = "https://deluxe-vacation.net/api/cruises?page=";
     public static final String BASE_URL_PRODUCTS = "http://app.digitalsigma.io/api/products";
 
 

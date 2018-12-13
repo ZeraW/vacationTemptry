@@ -68,7 +68,7 @@ public class ProductActivity extends BaseActivity {
 
         modelArrayList = new ArrayList<>();
 
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, Utils.BASE_URL_PRODUCTS, (String) null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, Utils.BASE_URL_PRODUCTS,  null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 

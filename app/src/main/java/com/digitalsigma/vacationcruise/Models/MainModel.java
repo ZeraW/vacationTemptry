@@ -1,42 +1,51 @@
 package com.digitalsigma.vacationcruise.Models;
 
+import java.util.ArrayList;
+
 /**
  * Created by Hima on 4/15/2018.
  */
 
 public class MainModel {
 
-    String text,title,logo;
+    private String id,name,description,itinerary,logo,departure;
+    private ArrayList<String> imgArray;
 
-
-    public MainModel(String title , String text, String logo) {
-        this.text = text;
-        this.title = title;
+    public MainModel(String id, String name, String description, String itinerary, String logo, String departure, ArrayList<String> imgArray) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.itinerary = itinerary;
         this.logo = logo;
-
-    }
-    public String getText() {
-        return text;
+        this.departure = departure;
+        this.imgArray = imgArray;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public String getId() {
+        return id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getDescription() {
+        return description;
+    }
+
+    public String getItinerary() {
+        return itinerary;
     }
 
     public String getLogo() {
         return logo;
     }
 
-    public void setLogo(String logo) {
-        this.logo = logo;
+    public String getDeparture() {
+        return departure;
     }
 
+    public ArrayList<String> getImgArray() {
+        return imgArray;
+    }
 }

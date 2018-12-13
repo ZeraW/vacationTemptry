@@ -17,7 +17,7 @@ public class PagerViewAdapter extends FragmentPagerAdapter {
             case 0:
                 return new InfoFragment();
             case 1:
-                return new InfoFragment();
+                return new GalleryFragment();
             case 2:
                 return new BookingFragment();
             default:
