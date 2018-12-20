@@ -3,10 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://F:\MyJavaProject\fk\vacationTemptry\app\app.iml" filepath="F:\MyJavaProject\fk\vacationTemptry\app\app.iml" />
       <module fileurl="file://F:\MyJavaProject\fk\vacationTemptry\vacationTemp.iml" filepath="F:\MyJavaProject\fk\vacationTemptry\vacationTemp.iml" />
       <module fileurl="file://$PROJECT_DIR$/vacationTemptry.iml" filepath="$PROJECT_DIR$/vacationTemptry.iml" />
-      <module fileurl="file://F:\MyJavaProject\fk\vacationTemptry\vacationTemptry.iml" filepath="F:\MyJavaProject\fk\vacationTemptry\vacationTemptry.iml" />
     </modules>
   </component>
 </project>

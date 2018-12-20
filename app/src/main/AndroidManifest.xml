@@ -10,6 +10,8 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality.
     -->
+
+    <!--android:screenOrientation="portrait"-->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
@@ -19,11 +21,11 @@
         android:roundIcon="@drawable/appicon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.digitalsigma.vacationcruise.Activity.BaseActivity" />
+        <activity android:name=".View.Activity.BaseActivity" />
         <activity
-            android:name="com.digitalsigma.vacationcruise.Activity.MainActivity"
+            android:name=".View.Activity.MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
-            android:screenOrientation="portrait"
+
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,12 +33,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.digitalsigma.vacationcruise.Activity.Details.DetailsProjects"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name="com.digitalsigma.vacationcruise.Activity.ServiceActivity" />
-        <activity android:name="com.digitalsigma.vacationcruise.Activity.ProductActivity" />
-        <activity android:name="com.digitalsigma.vacationcruise.Activity.Details.DetailsProduct" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -49,16 +45,18 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".Activity.Cruises.CruisesActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppThemeNoAction"
-            />
-
         <activity
-            android:name="com.digitalsigma.vacationcruise.Activity.ContactUsActivity"
+            android:name=".View.Activity.ContactUsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name="com.digitalsigma.vacationcruise.Activity.AboutUsActivity" />
-        <activity android:name=".Activity.Details.DetailsGallery" />
+        <activity android:name=".View.Activity.AboutUsActivity" />
+        <activity android:name=".View.Activity.Details.DetailsGallery" />
+        <activity android:name=".View.Activity.CruisesActivity" />
+        <activity android:name=".View.Activity.Details.CruisesDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+
+        </activity>
+
 
     </application>
 
